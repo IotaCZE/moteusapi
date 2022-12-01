@@ -93,6 +93,8 @@ enum Register : uint32_t {
   kCommandQCurrent = 0x01c,
   kCommandDCurrent = 0x01d,
 
+  kVoltageFOCThetaRate = 0x01e,
+
   kCommandPosition = 0x020,
   kCommandVelocity = 0x021,
   kCommandFeedforwardTorque = 0x022,
@@ -101,6 +103,10 @@ enum Register : uint32_t {
   kCommandPositionMaxTorque = 0x025,
   kCommandStopPosition = 0x026,
   kCommandTimeout = 0x027,
+
+  kVelocityLimit = 0x028,
+  kAccelerationLimit = 0x029,
+  kFixedVoltageOverride = 0x02a,
 
   kPositionKp = 0x030,
   kPositionKi = 0x031,
@@ -144,6 +150,7 @@ enum class Mode {
   kZeroVelocity = 12,
   kStayWithinBounds = 13,
   kMeasureInductance = 14,
+  kBrake = 15,
   kNumModes,
 };
 
